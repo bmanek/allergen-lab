@@ -1,11 +1,5 @@
 Rails.application.routes.draw do
-  get 'ingredients/index'
-
-  get 'ingredients/show'
-
-  get 'recipes/index'
-
-  get 'recipes/show'
-
-  get 'users/show'
+  get 'recipes/new', to: 'recipes#new'
+  post 'recipes', to: 'recipes#create', as: '-'
+  get 'recipes', to: 'recipes#index', as: 'recipes'
 end
