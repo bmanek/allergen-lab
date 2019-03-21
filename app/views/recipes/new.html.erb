@@ -1,7 +1,7 @@
 <h2>Create new recipe</h2>
 
 <%= form_for @recipe do |r| %>
-<%= r. %>
-<%= r.collection_check_boxes :ingredient_ids, @ingredients, :id, :name %>
+<%= r.collection_select(:user_id, User.all, :id, :name, prompt: "Pick a User!")%>
+<%= r.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :name %>
 <%= r.submit %>
 <% end %>

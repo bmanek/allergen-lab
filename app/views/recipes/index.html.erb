@@ -1,4 +1,8 @@
+<h2>All Recipes</h2>
+
 <% @recipes.each do |r| %>
-<%= r.name %>
-<%= r.ingredients.all %>
+<h4><%= r.user.name %> wants to eat:</h4>
+<% r.ingredients.each do |i| %>
+<%= i.name %>
+<% end %>
 <% end %>
